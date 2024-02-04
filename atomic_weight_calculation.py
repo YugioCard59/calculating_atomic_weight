@@ -35,8 +35,7 @@ def main():
 
     #Print sum of atoms and weight
     #print(f'The sum of all your atoms in your formula is: {sumAtoms}')
-    print(f'Your formula had the following elements: {newElementList}\n'
-          f'with the following number of atoms respectively: {newAtomNumberList}')
+    print(f'Your chemical formula is the following:  {chmFormula}')
     print(f'The total atomic weight of your formula is: {sumWt}')
     return sumAtoms, sumWt
 
