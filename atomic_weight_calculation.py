@@ -29,12 +29,25 @@ def main():
     for atomNum in storageElementAtoms:
         newAtomNumberList.append(str(atomNum))
 
+    #make Lists into string for chm formula
+    chmFormula = makeChmFormula(newElementList, newAtomNumberList)
+    
+
     #Print sum of atoms and weight
     #print(f'The sum of all your atoms in your formula is: {sumAtoms}')
     print(f'Your formula had the following elements: {newElementList}\n'
           f'with the following number of atoms respectively: {newAtomNumberList}')
     print(f'The total atomic weight of your formula is: {sumWt}')
     return sumAtoms, sumWt
+
+def makeChmFormula(list1, list2):
+    newList = []
+    for i in range(len(list1)):
+        list1[i] = list1[i] + list2[i]
+        newList.append(list1[i])
+        completeList = ''.join(newList)
+    return(completeList)
+
 
 def printElementMenu():
     print(f'Please choose from the elements in the Menu. Please\n',
