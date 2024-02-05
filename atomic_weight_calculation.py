@@ -41,11 +41,20 @@ def main():
 
 def makeChmFormula(list1, list2):
     newList = []
-    for i in range(len(list1)):
-        list1[i] = list1[i] + list2[i]
-        newList.append(list1[i])
-        completeList = ''.join(newList)
-    return(completeList)
+    if list1[1] == 0 and list2[1] == '0':
+    
+         list1 = list1[0] + list2[0]
+         newList.append(list1)
+         completeList = ''.join(newList)
+         return completeList
+    else:
+      
+        for i in range(len(list1)):
+            
+            list1[i] = str(list1[i]) + list2[i]
+            newList.append(list1[i])
+            completeList = ''.join(newList)
+        return(completeList)
 
 
 def printElementMenu():
